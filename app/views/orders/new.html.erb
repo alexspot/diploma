@@ -1,0 +1,21 @@
+<div class="row">
+	<div class="span5">
+		
+		<%= form_for([@place, @order]) do |f| %>
+			<%= render 'shared/error_messages', object: f.object %>
+			
+				<%= f.label "Place number" %>
+				<%= f.text_field :place_number, :value => @place.number %>
+				
+				<%= f.label "Price" %>
+				<%= f.text_field :price, :value => @event.price %>	
+				
+				<%= f.label "Date" %>
+				<%= f.text_field :date, :value => @event.start_time %>	
+				
+				<%= f.hidden_field :user_id, :value => current_user.id %>		
+						
+			<%= f.submit "Make order", class: "btn btn-large btn-primary" %>
+		<% end %>
+	</div>
+</div>

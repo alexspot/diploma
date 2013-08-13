@@ -1,0 +1,22 @@
+<div class="row">
+	<div class="span12 offset3">
+			<div class="places">
+		<% @place.each do |place| %>
+			
+		<% if place.status == 1 %>
+			<div class="busy-place">
+		<% else %>
+			<div class="free-place">
+		<% end %>
+		<%= link_to place.number, place %>			</span>
+			</div>
+		<% if (place.number % 10) == 0 %>
+		<br><br>
+		<%end%>
+		
+		 <% end %>
+		</div>
+	</div>
+</div>
+
+<%= link_to "Manage places" , manage_places_path %>

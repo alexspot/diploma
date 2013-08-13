@@ -1,0 +1,17 @@
+
+<h3><%= @event.name %></h3><br>
+<%= image_tag @event.poster.url(:medium), :class => 'img-polaroid' %>
+<%= @event.content %><br>
+
+<div class="span5">
+
+  <% @event.places.each do |place|%>
+      <% if place.status == 0 %>
+          <li><%= link_to place.number, event_place_path(@event, place) %></li>
+      <% else %>
+          <li><%= link_to place.number%></li>
+      <% end%>
+  <% end %>
+</div>
+
+

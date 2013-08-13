@@ -1,0 +1,19 @@
+<h1>Add place</h1>
+	<div class="row">
+		<div class="span6 offset3">
+			<%= form_for(@place) do |place| %>
+
+				<%= render 'shared/error_messages', object: place.object %>
+		
+				<%= place.label :number %>
+				<%= place.text_field :number %>
+				
+				<%= place.label :price %>
+				<%= place.text_field :price %>
+			
+
+				<%= place.submit "add place", class: "btn btn-large btn-primary" %>
+				<% end %>
+		</div>
+	</div>
+

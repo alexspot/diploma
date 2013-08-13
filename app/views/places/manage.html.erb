@@ -1,0 +1,13 @@
+<div class="row">
+	<div class="span12 offset3">
+		<% @place.each do |place| %>
+		<li>
+		<%= place.number %>
+		<%= link_to "delete", place, method: :delete, confirm: "sure?"%>
+		</li>
+		<% end %>
+		 
+	</div>
+</div>
+
+<%= link_to "Add another place" , add_place_path %>
