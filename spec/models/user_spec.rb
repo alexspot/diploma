@@ -28,6 +28,11 @@ describe '#print_am_pm' do
 end
 
 describe User do
+
+  subject { FactoryGirl.build(:user) }
+  it { should be_valid }
+
+
   describe 'validations' do
     context 'when correct data given' do
       it 'should be valid' do
