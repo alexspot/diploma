@@ -40,6 +40,12 @@ describe User do
         user.valid?.should be_true
       end
     end
+    context 'when correct data given FG' do
+      it 'should be valid' do
+        user = FactoryGirl.build(:user)
+        user.valid?.should be_true
+      end
+    end
     context 'when no name given'  do
       it 'should raise error'  do
         user = User.new(email: 'lorem@ipsim.com', password: '12345678', password_confirmation: '12345678')
