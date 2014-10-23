@@ -5,3 +5,4 @@ git merge --no-ff --no-commit origin/master
 git commit -n -a -m "SI-123: Refresh SI-123_UPDATE_PHP branch from master" 
 git push origin <BRANCH>
 git diff origin/master
+
